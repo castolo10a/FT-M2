@@ -3,6 +3,9 @@
 .home {
 
   .intro {
+    img{
+      .imgHeader(100%, 7px, 20px)
+    }
 
     h2 {
       padding: 15px;
@@ -10,6 +13,14 @@
 
     p {
       padding:0 15px;
+    }
+
+    @media @phone{
+      img{
+        .imgHeader(98%, 10px, 20px);
+        position: relative;
+        left: 4px;
+      }
     }
 
   }
@@ -24,6 +35,15 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+    @media @phone{
+      .tecnologia, .ondas {
+        display: none;
+      }
+      .auricular{
+        width: 100%;
+        margin-top: 35px;
+      }
     }
   }
 
@@ -40,9 +60,9 @@
   }
 
   .actual {
-    margin-top: 60px;
+    margin-top: 40px;
     border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
+    padding: 10px;
     display: flex;
     justify-content: center;
 
@@ -58,6 +78,17 @@
       }
 
       .btn {
+        .boton(white, @btn-bg-color, 10px);
+        @media @phone {
+          width: 100%;
+          text-align: center;
+          padding: 20px;
+          margin-bottom: 15px;
+        }
+      }
+
+      @media @phone {
+        width: 100%;
       }
     }
 
@@ -70,6 +101,18 @@
         height: auto;
         border-radius: 10px;
       }
+
+      @media @phone{
+        width: 100%;
+        margin-left: 0%;
+      }
+    }
+
+    @media @phone{
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
+
+
 }
